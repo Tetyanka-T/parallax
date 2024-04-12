@@ -1,0 +1,128 @@
+
+._container {
+    min-width: 1000px;
+    margin: 0px auto;
+    padding: 50px 20px;
+}
+.parallax {
+    min-height: 100vh;
+}
+.parallax__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    height: 0;
+}
+
+.parallax__container {
+    position: relative;
+    z-index: 2;
+}
+.parallax__images {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -20%;
+    z-index: 1;
+} 
+.parallax__title {
+    display: flex;
+    font-size: 40px;
+    margin: 50px 0px 30px 0px;
+    align-items: center;
+    color: #1AC4B9;
+}
+.parallax__title::before {
+    flex: 0 0 70px;
+    content: "";
+    margin: 0 30px 0 0;
+    background-color:#1AC4B9;
+    height: 2px;
+}
+
+.images-parallax__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.images-parallax__clouds,
+.images-parallax__mountains,
+.images-parallax__human {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+
+}
+.images-parallax__clouds {
+    background-image: url(../images/clouds.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    height: 1200px;
+ 
+}
+.images-parallax__mountains {
+    background-image: url(../images/mountains.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 50px;
+    z-index: 2;
+    height: 1325px;
+  
+}
+.images-parallax__human {
+    background-image: url(../images/human.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 300px;
+    z-index: 3;
+    height: 625px;
+ 
+}
+
+
+@media (max-aspect-ratio: 3/2) {
+    .images-parallax__human {
+        background-position: 20%  top;
+    }
+}
+// .content::before {
+//     content: "";
+//     position: absolute;
+//     pointer-events: none;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100px;
+//     transform: translate(0px, -80%);
+//     background-image: linear-gradient(to bottom, #2e2e25, #272f27, #20302b, #1b2f31, #1b2e37, #1b2d37, #1c2d38, #1d2c38, #182d35, #152d32, #152d2d, #172c28);
+// }
+.content {
+    background-color: #172C28;
+    position: relative;
+    z-index: 2;
+    padding: 30px 0;
+}
+
+.content__title {
+    font-size: 35px;
+    margin: 0 0 30px 0;
+    color: #72927D;
+}
+
+.content__text {
+    font-size: 20px;
+    line-height: 150%;
+    color: #8C7984;
+    & p {
+        margin-bottom: 30px;
+    }
+}
